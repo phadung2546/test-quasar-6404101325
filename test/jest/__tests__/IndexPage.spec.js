@@ -21,6 +21,7 @@ describe('IndexPage', () => {
     let header = wrapper.find('.htmlClass h1')
     expect(header.text()).toBe('I love Vue.')
   })
+
 })
 
 
