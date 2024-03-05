@@ -1,13 +1,21 @@
 import FunctionPage from 'src/pages/IndexPage.vue'
 import { shallowMount } from '@vue/test-utils'
 
+test('Name Phadungkiat Sutayo 6404101325 avaliable on file' ,() =>{
+  const wrapper = shallowMount(FunctionPage)
+  expect(wrapper.find('#firstname').element.value).toBe('Phadungkiat');
+  expect(wrapper.find('#lastname').element.value).toBe('Sutayo');
+  expect(wrapper.find('#id').element.value).toBe('6404101325');
+
+})
+
 describe('IndexPage', () => {
   it('should render correct contents', () => {
     const wrapper = shallowMount(FunctionPage)
     let header = wrapper.find('.htmlClass h1')
     expect(header.exists()).toBe(true)
     expect(header.text())
-      .toBe('Phadungkiat Sutayo 6404101325')
+      .toBe('Vue is awesome.')
   })
 })
 

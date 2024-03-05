@@ -9,7 +9,10 @@
       <button @click="addition(firstValue,secondValue)" >Addition</button>
       <button @click="subtraction(firstValue,secondValue)" >Subtraction</button>
       <button @click="multiplication(firstValue,secondValue)" >Multiplication</button>
-      <button @click="divide(firstValue,secondValue)" >Divide</button>
+      <button @click="divide(firstValue,secondValue)" >Divide</button> <br>
+      <input type="text" id="firstname" v-model="firstname" />
+      <input type="text" id="lastname" v-model="lastname" />
+      <input type="text" id="id" v-model="id" />
   </form>
   </div>
 </template>
@@ -19,10 +22,13 @@ export default {
   name: 'HtmlComponent',
   data() {
     return {
-      title: 'Phadungkiat Sutayo 6404101325',
+      title: 'Vue is awesome.',
       firstValue:0,
       secondValue:0,
-      answerVulue:0
+      answerVulue:0,
+      firstname: 'Phadungkiat',
+      lastname: 'Sutayo',
+      id: '6404101325'
     }
   },
   methods: {
